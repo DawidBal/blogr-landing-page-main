@@ -1,0 +1,47 @@
+@use 'variables';
+
+.section__header {
+    background: url("../../images/bg-pattern-intro.svg"),
+        linear-gradient(to right, var(--bg-very-light-red), var(--bg-light-red));
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 180%;
+    color: var(--white);
+    border-bottom-left-radius: 100px;
+}
+
+.header {
+    &__links {
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.nav {
+    padding: 3rem 1rem 0 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    &__links {
+        gap: 1.5rem;
+        align-items: center;
+    }
+}
+
+.intro {
+    padding: 7rem 0;
+    gap: 1rem;
+    text-align: center;
+    &__title {
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+    &__links {
+        margin-top: 1rem;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
+
+.menu {
+    gap: 3.5rem;
+}
