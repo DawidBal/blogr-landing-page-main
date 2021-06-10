@@ -1,0 +1,231 @@
+:root {
+  --light-red: hsl(356, 100%, 66%);
+  --very-light-red: hsl(355, 100%, 74%);
+  --very-dark-blue: hsl(208, 49%, 24%);
+  --white: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(240, 2%, 79%);
+  --very-dark-grayish-blue: hsl(207, 13%, 34%);
+  --very-dark-black-blue: hsl(240, 10%, 16%);
+  --bg-very-light-red: hsl(13, 100%, 72%);
+  --bg-light-red: hsl(353, 100%, 62%);
+  --bg-very-dark-gray-blue: hsl(237, 17%, 21%);
+  --bg-very-dark-des-blue: hsl(237, 23%, 32%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html,
+body,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Overpass", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.l-flex {
+  display: flex;
+}
+
+.l-col {
+  flex-direction: column;
+}
+
+.l-grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.section__header {
+  height: 37.5rem;
+  background: url("../../images/bg-pattern-intro.svg"), linear-gradient(to right, var(--bg-very-light-red), var(--bg-light-red));
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 180%;
+  color: var(--white);
+  border-bottom-left-radius: 5rem;
+}
+
+.header__links {
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav {
+  padding: 3.75rem 10.3125rem 0 10.3125rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__links {
+  gap: 2rem;
+  align-items: center;
+}
+
+.intro {
+  padding-top: 9.375rem;
+  text-align: center;
+}
+.intro__title {
+  font-size: 3.7rem;
+  line-height: 1;
+}
+.intro__description {
+  margin-top: 1.625rem;
+  margin-bottom: 3.125rem;
+  font-size: 1.2rem;
+}
+.intro__links {
+  gap: 1rem;
+  justify-content: center;
+}
+
+.menu {
+  gap: 4.06rem;
+}
+
+.design {
+  height: 63.125rem;
+  position: relative;
+  padding-bottom: 16.5625rem;
+  overflow: hidden;
+}
+.design__title {
+  padding-top: 10rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  color: var(--very-dark-blue);
+  font-size: 2rem;
+}
+.design__content {
+  grid-template-columns: 1fr 1fr;
+}
+.design::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='925' height='882' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3ClinearGradient x1='0%25' y1='27.881%25' x2='100%25' y2='72.119%25' id='c'%3E%3Cstop stop-color='%23FF8F71' offset='0%25'/%3E%3Cstop stop-color='%23FF3E55' offset='100%25'/%3E%3C/linearGradient%3E%3ClinearGradient x1='0%25' y1='41.725%25' x2='100%25' y2='58.275%25' id='e'%3E%3Cstop stop-color='%23FF8F71' offset='0%25'/%3E%3Cstop stop-color='%23FF3E55' offset='100%25'/%3E%3C/linearGradient%3E%3Cfilter x='-10.9%25' y='-11.7%25' width='121.8%25' height='132.8%25' filterUnits='objectBoundingBox' id='b'%3E%3CfeOffset dy='20' in='SourceAlpha' result='shadowOffsetOuter1'/%3E%3CfeGaussianBlur stdDeviation='20' in='shadowOffsetOuter1' result='shadowBlurOuter1'/%3E%3CfeColorMatrix values='0 0 0 0 0.421821759 0 0 0 0 0.554338424 0 0 0 0 0.893710371 0 0 0 0.243444056 0' in='shadowBlurOuter1'/%3E%3C/filter%3E%3Crect id='a' x='0' y='0' width='642' height='427' rx='15'/%3E%3C/defs%3E%3Cg transform='translate(40)' fill='none' fill-rule='evenodd'%3E%3Crect fill='%232D2E40' opacity='.08' transform='matrix(1 0 0 -1 0 890)' x='145' y='144' width='600' height='602' rx='300'/%3E%3Crect stroke='%232D2E40' opacity='.5' transform='matrix(1 0 0 -1 0 882)' x='105.5' y='100.5' width='679' height='681' rx='339.5'/%3E%3Crect stroke='%232D2E40' opacity='.25' transform='matrix(1 0 0 -1 0 882)' x='5.5' y='.5' width='879' height='881' rx='439.5'/%3E%3Cg transform='translate(0 242)'%3E%3Cmask id='d' fill='%23fff'%3E%3Cuse xlink:href='%23a'/%3E%3C/mask%3E%3Cg fill-rule='nonzero'%3E%3Cuse fill='%23000' filter='url(%23b)' xlink:href='%23a'/%3E%3Cuse fill='url(%23c)' xlink:href='%23a'/%3E%3C/g%3E%3Cpath d='M3 125h636a3 3 0 013 3v296a3 3 0 01-3 3H3a3 3 0 01-3-3V128a3 3 0 013-3z' fill='%232D2E40' fill-rule='nonzero' mask='url(%23d)'/%3E%3Crect fill='%23FFF' fill-rule='nonzero' mask='url(%23d)' x='90.523' y='47.709' width='135.785' height='137.165' rx='3'/%3E%3Cellipse fill='%232D2E40' mask='url(%23d)' cx='158.416' cy='116.888' rx='39.306' ry='39.36'/%3E%3Crect fill='%23FFF' fill-rule='nonzero' mask='url(%23d)' x='248.939' y='47.709' width='302.538' height='325.617' rx='3'/%3E%3C/g%3E%3Cpath d='M209 284c47.125-73.367 81.977-113.013 104.557-118.938 33.87-8.886 23.765 83.14 72.535 72.473 48.77-10.666 54.716-103.974 91.603-108.37 36.887-4.397 56.402 80.946 72.515 88.81 10.742 5.241 24.005-6.094 39.79-34.007' stroke='url(%23e)' stroke-width='8' stroke-linecap='round' transform='translate(0 242)'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 63%;
+  background-position: right center;
+  left: 19.3%;
+}
+
+.editor-bg {
+  position: relative;
+}
+
+.article-wrapper {
+  margin-left: 10.3125rem;
+  gap: 5.375rem;
+}
+
+.article__title {
+  margin-bottom: 2.25rem;
+  font-size: 1.7rem;
+}
+
+.article__text {
+  letter-spacing: 0.034375rem;
+  line-height: 1.7;
+}
+
+.link {
+  cursor: pointer;
+  position: relative;
+}
+.link::before {
+  content: "";
+  width: 0;
+  background: var(--white);
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.link-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 8.625rem;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  padding: 0.8rem 0;
+  border-radius: 100px;
+  transition: background 0.3s ease;
+  font-weight: 700;
+  background: var(--white);
+  color: var(--very-light-red);
+}
+.link-button:hover {
+  background: var(--very-light-red);
+  color: var(--white);
+}
+.link-button--reverse {
+  background: none;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+.link-button--reverse:hover {
+  background: var(--white);
+  color: var(--very-light-red);
+}
+
+.links-wrapper {
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.icon {
+  fill: currentColor;
+  transform: rotateZ(90deg);
+}
+
+/*# sourceMappingURL=style.css.map */
