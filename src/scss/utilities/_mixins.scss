@@ -5,3 +5,21 @@
 @mixin gridTemplateRow($grid-template-rows) {
   grid-template-rows: $grid-template-rows;
 }
+
+@mixin article-wrapper($direction) {
+  @if ($direction == left) {
+    margin-left: 10.3125rem;
+  } @else {
+    margin-right: 10.3125rem;
+  }
+  gap: 5.375rem;
+}
+
+@mixin pseudoImage {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}

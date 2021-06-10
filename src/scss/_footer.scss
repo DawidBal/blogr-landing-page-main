@@ -1,0 +1,30 @@
+@use './utilities/mixins';
+
+.footer {
+  height: 25rem;
+  background: var(--very-dark-black-blue);
+  border-top-right-radius: var(--b-radius);
+  &__nav {
+    height: 100%;
+    padding: 4.375rem 8.4375rem 0 10.3125rem;
+    flex-wrap: wrap;
+
+    & > *:not(.attribution) {
+      flex: 1 0 auto;
+    }
+  }
+  &__col {
+    gap: 2.5rem;
+  }
+}
+
+.col__title {
+  margin-top: 0.625rem;
+  color: var(--white);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+.col__list {
+  color: var(--grayish-blue);
+  gap: 1.375rem;
+}
