@@ -6,7 +6,7 @@
   &::before {
     content: "";
     width: 0;
-    background: var(--white);
+    background: currentColor;
     height: 2px;
     position: absolute;
     left: 50%;
