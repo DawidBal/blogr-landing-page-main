@@ -10,7 +10,6 @@
     margin-bottom: 5rem;
     text-align: center;
     color: var(--very-dark-blue);
-    font-size: 2rem;
   }
   &__content {
     @include mixins.gridTemplateColumn(1fr 1fr);
@@ -35,14 +34,4 @@
 .article-wrapper {
   margin-left: 10.3125rem;
   gap: 5.375rem;
-}
-
-.article__title {
-  margin-bottom: 2.25rem;
-  font-size: 1.7rem;
-}
-
-.article__text {
-  letter-spacing: 0.034375rem;
-  line-height: 1.7;
 }
