@@ -28,3 +28,20 @@
   color: var(--grayish-blue);
   gap: 1.375rem;
 }
+
+@media only screen and (max-width: 1020px) {
+  .footer {
+    height: 100%;
+    &__nav {
+      padding: 4.0625rem 0;
+      gap: 3rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      & > div {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

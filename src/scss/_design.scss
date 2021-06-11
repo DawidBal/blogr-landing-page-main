@@ -1,9 +1,8 @@
 @use './utilities/mixins';
 
 .design {
-  height: 63.125rem;
   position: relative;
-  padding-bottom: 16.5625rem;
+  margin-bottom: 16.5625rem;
   overflow: hidden;
   &__title {
     padding-top: 10rem;
@@ -25,4 +24,29 @@
 
 .article-wrapper--design {
   @include mixins.article-wrapper(left);
+}
+
+@media only screen and (max-width: 1020px) {
+  .design {
+    margin: 0 1.375rem;
+    margin-bottom: 15rem;
+    &__title {
+      padding-top: 5.8125rem;
+      margin-bottom: calc(5.625rem + 290px);
+    }
+    &__content {
+      @include mixins.gridTemplateColumn(1fr);
+    }
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='406' height='331' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3ClinearGradient x1='0%25' y1='27.846%25' x2='100%25' y2='72.154%25' id='c'%3E%3Cstop stop-color='%23FF8F71' offset='0%25'/%3E%3Cstop stop-color='%23FF3E55' offset='100%25'/%3E%3C/linearGradient%3E%3ClinearGradient x1='0%25' y1='41.623%25' x2='100%25' y2='58.377%25' id='e'%3E%3Cstop stop-color='%23FF8F71' offset='0%25'/%3E%3Cstop stop-color='%23FF3E55' offset='100%25'/%3E%3C/linearGradient%3E%3Cfilter x='-21.5%25' y='-23%25' width='142.9%25' height='164.5%25' filterUnits='objectBoundingBox' id='b'%3E%3CfeOffset dy='20' in='SourceAlpha' result='shadowOffsetOuter1'/%3E%3CfeGaussianBlur stdDeviation='20' in='shadowOffsetOuter1' result='shadowBlurOuter1'/%3E%3CfeColorMatrix values='0 0 0 0 0.421821759 0 0 0 0 0.554338424 0 0 0 0 0.893710371 0 0 0 0.243444056 0' in='shadowBlurOuter1'/%3E%3C/filter%3E%3Crect id='a' x='0' y='0' width='326' height='217' rx='5'/%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(40)'%3E%3Crect fill='%232D2E40' opacity='.08' transform='matrix(1 0 0 -1 0 329)' x='52' y='53' width='223' height='223' rx='111.5'/%3E%3Crect stroke='%232D2E40' opacity='.5' transform='matrix(1 0 0 -1 0 326)' x='37.5' y='37.5' width='251' height='251' rx='125.5'/%3E%3Crect stroke='%232D2E40' opacity='.25' transform='matrix(1 0 0 -1 0 326)' x='.5' y='.5' width='325' height='325' rx='162.5'/%3E%3C/g%3E%3Cg transform='translate(40 54)'%3E%3Cmask id='d' fill='%23fff'%3E%3Cuse xlink:href='%23a'/%3E%3C/mask%3E%3Cg fill-rule='nonzero'%3E%3Cuse fill='%23000' filter='url(%23b)' xlink:href='%23a'/%3E%3Cuse fill='url(%23c)' xlink:href='%23a'/%3E%3C/g%3E%3Cpath d='M3 63.525h320a3 3 0 013 3V214a3 3 0 01-3 3H3a3 3 0 01-3-3V66.525a3 3 0 013-3z' fill='%232D2E40' fill-rule='nonzero' mask='url(%23d)'/%3E%3Crect fill='%23FFF' fill-rule='nonzero' mask='url(%23d)' x='45.967' y='24.246' width='68.95' height='69.707' rx='3'/%3E%3Cellipse fill='%232D2E40' mask='url(%23d)' cx='80.442' cy='59.402' rx='19.959' ry='20.003'/%3E%3Crect fill='%23FFF' fill-rule='nonzero' mask='url(%23d)' x='126.408' y='24.246' width='153.625' height='165.478' rx='3'/%3E%3C/g%3E%3Cpath d='M106 144c23.871-37.394 41.526-57.6 52.964-60.62 17.158-4.53 12.04 42.374 36.744 36.938 24.705-5.436 27.717-52.994 46.403-55.234 18.685-2.241 28.57 41.257 36.733 45.264 5.441 2.672 12.16-3.105 20.156-17.332' stroke='url(%23e)' stroke-width='8' stroke-linecap='round' transform='translate(40 54)'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 105%;
+      background-position: center top 10.5rem;
+      left: 0;
+    }
+  }
+  .article-wrapper--design {
+    text-align: center;
+    margin: 0;
+    gap: 2.875rem;
+  }
 }

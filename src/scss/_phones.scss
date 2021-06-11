@@ -33,3 +33,28 @@
     background-position: center -15px;
   }
 }
+
+@media only screen and (max-width: 1020px) {
+  .phones {
+    height: 100%;
+    @include mixins.gridTemplateColumn(1fr);
+    text-align: center;
+    padding: 0 1.375rem;
+    &::before {
+      background-size: 160%;
+      background-position: center top -17.5rem;
+      border-bottom-left-radius: var(--b-radius); // Makes phones image visible
+      border-top-right-radius: var(--b-radius); // But prevents overflow
+    }
+    &__images {
+      height: calc(100% + 22.5rem);
+      &::before {
+        background-size: 100%;
+        background-position: center top;
+      }
+    }
+    &-article {
+      padding: 11rem 0 6rem 0;
+    }
+  }
+}

@@ -17,4 +17,19 @@
 
 .title {
   font-size: 2.3rem;
+  letter-spacing: -1px;
+}
+
+@media only screen and (max-width: 1020px) {
+  .title {
+    font-size: 1.9rem;
+  }
+
+  .article__title {
+    font-size: 1.9rem;
+    margin-bottom: 1.625rem;
+    &--white {
+      font-size: 2.6rem;
+    }
+  }
 }

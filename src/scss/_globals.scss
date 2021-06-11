@@ -62,11 +62,10 @@ ul {
 }
 
 .attribution {
+  background: var(--very-dark-black-blue);
   color: var(--white);
   font-size: 0.7rem;
   text-align: center;
-  flex: 1 1 100%;
-  align-self: flex-end;
 }
 
 .attribution a {
@@ -81,4 +80,16 @@ ul {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

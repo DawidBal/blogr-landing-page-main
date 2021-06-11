@@ -9,17 +9,26 @@
 @mixin article-wrapper($direction) {
   @if ($direction == left) {
     margin-left: 10.3125rem;
+    gap: 5.375rem;
   } @else {
     margin-right: 10.3125rem;
+    gap: 5.375rem;
   }
-  gap: 5.375rem;
 }
 
 @mixin pseudoImage {
   content: "";
   position: absolute;
+  display: block;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   z-index: -1;
+}
+
+@mixin hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+  position: absolute;
 }
