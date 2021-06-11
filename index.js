@@ -1,7 +1,7 @@
 const product = document.querySelector('.js-product');
 const company = document.querySelector('.js-company');
 const connect = document.querySelector('.js-connect');
-const header = document.querySelector('.section__header');
+const hamburger = document.querySelector('.hamburger');
 
 const productMenu = document.querySelector('.product__menu');
 const companyMenu = document.querySelector('.company__menu');
@@ -10,7 +10,7 @@ const connectMenu = document.querySelector('.connect__menu');
 const menus = [productMenu, companyMenu, connectMenu];
 const eventList = [product, company, connect];
 
-const hideOtherMenus = (menuToSkip, eventTarget) => { 
+const hideOtherMenus = (menuToSkip, eventTarget) => {
   menus.forEach(menu => {
     if (menu !== menuToSkip) {
       const icon = menu.parentElement.querySelector('.icon');
@@ -20,7 +20,7 @@ const hideOtherMenus = (menuToSkip, eventTarget) => {
   });
 
   eventList.forEach(item => {
-    if(item !== eventTarget) {
+    if (item !== eventTarget) {
       item.setAttribute('aria-expanded', false);
     }
   })
@@ -28,15 +28,9 @@ const hideOtherMenus = (menuToSkip, eventTarget) => {
 
 const toggleMenu = (menu, eventTarget) => {
   const icon = eventTarget.parentElement.querySelector('.icon');
-  if(!menu.classList.contains('hidden')) {
-    menu.classList.add('hidden');
-    eventTarget.setAttribute('aria-expanded', false);
-    toggleIcon(icon);
-  } else {
-  eventTarget.setAttribute('aria-expanded', true);
+  eventTarget.setAttribute('aria-expanded', menu.classList.contains('hidden'));
   toggleIcon(icon);
-  menu.classList.remove('hidden');
-  }
+  menu.classList.toggle('hidden');
 }
 
 const toggleIcon = (icon) => {
@@ -54,7 +48,7 @@ eventList.forEach(item => {
         toggleMenu(companyMenu, e.target);
         hideOtherMenus(companyMenu, e.target);
         break;
-      case "Connect": 
+      case "Connect":
         toggleMenu(connectMenu, e.target);
         hideOtherMenus(connectMenu, e.target);
         break;
@@ -62,4 +56,10 @@ eventList.forEach(item => {
         break;
     }
   })
+})
+
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('hamburger--active');
+  hamburger.setAttribute('aria-expanded', hamburger.classList.contains('hamburger--active'));
 })
