@@ -70,6 +70,12 @@ ul {
   display: none;
 }
 
+.company,
+.product,
+.connect {
+  position: relative;
+}
+
 .attribution {
   color: var(--white);
   font-size: 0.7rem;
@@ -80,6 +86,22 @@ ul {
 
 .attribution a {
   color: #3e52a3;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+               supported by Chrome, Edge, Opera and Firefox */
 }
 
 .section__header {
@@ -137,6 +159,16 @@ ul {
 
 .menu {
   gap: 4.06rem;
+}
+.menu__col {
+  gap: 1rem;
+  position: absolute;
+  width: 10.5rem;
+  left: -1.5625rem;
+  padding: 2.1875rem 1.5625rem;
+  margin-top: 1.6875rem;
+  background: var(--white);
+  border-radius: 5px;
 }
 
 .design {
@@ -291,6 +323,15 @@ ul {
   width: 100%;
   left: 0;
 }
+.link--menu {
+  color: var(--very-dark-black-blue);
+}
+.link--menu:hover {
+  font-weight: bold;
+}
+.link--menu::before {
+  display: none;
+}
 
 .link-button {
   display: inline-flex;
@@ -321,6 +362,7 @@ ul {
 }
 
 .links-wrapper {
+  position: relative;
   gap: 0.5rem;
   align-items: center;
 }
@@ -328,6 +370,10 @@ ul {
 .icon {
   fill: currentColor;
   transform: rotateZ(90deg);
+  transition: transform 0.3s ease;
+}
+.icon--active {
+  transform: rotateZ(-90deg);
 }
 
 .article__title {
