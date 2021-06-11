@@ -18,6 +18,16 @@
     width: 100%;
     left: 0;
   }
+
+  &--menu {
+    color: var(--very-dark-black-blue);
+    &:hover {
+      font-weight: bold;
+    }
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .link-button {
@@ -49,6 +59,7 @@
 }
 
 .links-wrapper {
+  position: relative;
   gap: 0.5rem;
   align-items: center;
 }

@@ -53,4 +53,14 @@
 
 .menu {
     gap: 4.06rem;
+    &__col {
+        gap: 1rem;
+        position: absolute;
+        width: 10.5rem;
+        left: -1.5625rem;
+        padding: 2.1875rem 1.5625rem;
+        margin-top: 1.6875rem;
+        background: var(--white);
+        border-radius: 5px;
+    }
 }
