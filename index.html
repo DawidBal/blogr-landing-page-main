@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-  <script src="./index.js" defer></script>
+  <script type="module" src="./index.js" defer></script>
 </head>
 
 <body>
@@ -36,11 +36,11 @@
                 </svg>
               </div>
               <ul class="menu__col product__menu l-flex l-col hidden">
-                <li><a href="" class="link link--menu">Overview</a></li>
-                <li><a href="" class="link link--menu">Pricing</a></li>
-                <li><a href="" class="link link--menu">Marketplace</a></li>
-                <li><a href="" class="link link--menu">Features</a></li>
-                <li><a href="" class="link link--menu">Integrations</a></li>
+                <li><a href="#" class="link link--menu">Overview</a></li>
+                <li><a href="#" class="link link--menu">Pricing</a></li>
+                <li><a href="#" class="link link--menu">Marketplace</a></li>
+                <li><a href="#" class="link link--menu">Features</a></li>
+                <li><a href="#" class="link link--menu">Integrations</a></li>
               </ul>
             </li>
             <li class="company">
@@ -52,10 +52,10 @@
                 </svg>
               </div>
               <ul class="menu__col company__menu l-flex l-col hidden">
-                <li><a href="" class="link link--menu">About</a></li>
-                <li><a href="" class="link link--menu">Team</a></li>
-                <li><a href="" class="link link--menu">Blog</a></li>
-                <li><a href="" class="link link--menu">Careers</a></li>
+                <li><a href="#" class="link link--menu">About</a></li>
+                <li><a href="#" class="link link--menu">Team</a></li>
+                <li><a href="#" class="link link--menu">Blog</a></li>
+                <li><a href="#" class="link link--menu">Careers</a></li>
               </ul>
             </li>
             <li class="connect">
@@ -67,15 +67,15 @@
                 </svg>
               </div>
               <ul class="menu__col connect__menu l-flex l-col hidden">
-                <li><a href="" class="link link--menu">Contact</a></li>
-                <li><a href="" class="link link--menu">Newsletter</a></li>
-                <li><a href="" class="link link--menu">LinkedIn</a></li>
+                <li><a href="#" class="link link--menu">Contact</a></li>
+                <li><a href="#" class="link link--menu">Newsletter</a></li>
+                <li><a href="#" class="link link--menu">LinkedIn</a></li>
               </ul>
             </li>
         </div>
         <div class="header__links l-flex">
-          <a class="link" href="">Login</a>
-          <a class="link-button" href="">Sign Up</a>
+          <a class="link" href="#">Login</a>
+          <a class="link-button" href="#">Sign Up</a>
         </div>
         </ul>
       </nav>
@@ -91,61 +91,60 @@
             <span class="hamburger__inner"></span>
           </span>
         </button>
-        <div class="hidden">
-          <div class="navigation">
-            <ul class="nav__links l-flex">
+        <div class="navigation-wrapper l-flex l-col js-mobile-nav">
+          <div class="navigation l-flex l-col">
+            <ul class="nav__links l-flex l-col">
               <li class="product">
                 <div class="links-wrapper l-flex">
-                  <span class="link js-product noselect" aria-expanded="false">Product</span>
+                  <span class="link link--mobile js-product-mobile noselect" aria-expanded="false">Product</span>
                   <svg class="icon icon--mobile" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
                     viewBox="0 0 24 24">
                     <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
                   </svg>
                 </div>
-                <ul class="menu__col product__menu l-flex l-col hidden">
-                  <li><a href="" class="link link--menu">Overview</a></li>
-                  <li><a href="" class="link link--menu">Pricing</a></li>
-                  <li><a href="" class="link link--menu">Marketplace</a></li>
-                  <li><a href="" class="link link--menu">Features</a></li>
-                  <li><a href="" class="link link--menu">Integrations</a></li>
+                <ul class="menu__col menu__col--mobile product__menu l-flex l-col hidden--mobile js-prod-mobile">
+                  <li><a href="#" class="link link--menu">Overview</a></li>
+                  <li><a href="#" class="link link--menu">Pricing</a></li>
+                  <li><a href="#" class="link link--menu">Marketplace</a></li>
+                  <li><a href="#" class="link link--menu">Features</a></li>
+                  <li><a href="#" class="link link--menu">Integrations</a></li>
                 </ul>
               </li>
               <li class="company">
                 <div class="links-wrapper l-flex">
-                  <span class="link js-company noselect" aria-expanded="false">Company</span>
+                  <span class="link link--mobile js-company-mobile noselect" aria-expanded="false">Company</span>
                   <svg class="icon icon--mobile" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
                     viewBox="0 0 24 24">
                     <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
                   </svg>
                 </div>
-                <ul class="menu__col company__menu l-flex l-col hidden">
-                  <li><a href="" class="link link--menu">About</a></li>
-                  <li><a href="" class="link link--menu">Team</a></li>
-                  <li><a href="" class="link link--menu">Blog</a></li>
-                  <li><a href="" class="link link--menu">Careers</a></li>
+                <ul class="menu__col menu__col--mobile company__menu l-flex l-col hidden--mobile js-comp-mobile">
+                  <li><a href="#" class="link link--menu">About</a></li>
+                  <li><a href="#" class="link link--menu">Team</a></li>
+                  <li><a href="#" class="link link--menu">Blog</a></li>
+                  <li><a href="#" class="link link--menu">Careers</a></li>
                 </ul>
               </li>
               <li class="connect">
                 <div class="links-wrapper l-flex">
-                  <span class="link js-connect noselect" aria-expanded="false">Connect</span>
+                  <span class="link link--mobile js-connect-mobile noselect" aria-expanded="false">Connect</span>
                   <svg class="icon icon--mobile" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
                     viewBox="0 0 24 24">
                     <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
                   </svg>
                 </div>
-                <ul class="menu__col connect__menu l-flex l-col hidden">
-                  <li><a href="" class="link link--menu">Contact</a></li>
-                  <li><a href="" class="link link--menu">Newsletter</a></li>
-                  <li><a href="" class="link link--menu">LinkedIn</a></li>
+                <ul class="menu__col menu__col--mobile connect__menu l-flex l-col hidden--mobile js-conn-mobile">
+                  <li><a href="#" class="link link--menu">Contact</a></li>
+                  <li><a href="#" class="link link--menu">Newsletter</a></li>
+                  <li><a href="#" class="link link--menu">LinkedIn</a></li>
                 </ul>
               </li>
+            </ul>
+            <div class="header__links l-flex l-col">
+              <a class="link link--mobile" href="#">Login</a>
+              <a class="link-button link-button--mobile" href="#">Sign Up</a>
+            </div>
           </div>
-          <div class="header__links l-flex">
-            <a class="link" href="">Login</a>
-            <a class="link-button" href="">Sign Up</a>
-          </div>
-          </ul>
-        </div>
         </div>
       </nav>
     </header>
@@ -153,8 +152,8 @@
       <h1 class="intro__title">A modern publishing platform</h1>
       <p class="intro__description">Grow your audience and build your online brand</p>
       <div class="intro__links l-flex">
-        <a class="link-button" href="">Start for Free</a>
-        <a class="link-button link-button--reverse" href="">Learn More</a>
+        <a class="link-button" href="#">Start for Free</a>
+        <a class="link-button link-button--reverse" href="#">Learn More</a>
       </div>
     </section>
   </section>
@@ -232,29 +231,29 @@
       <div class="footer__col l-flex l-col">
         <h4 class="col__title">Product</h4>
         <ul class="col__list l-flex l-col">
-          <li><a href="" class="link">Overview</a></li>
-          <li><a href="" class="link">Pricing</a></li>
-          <li><a href="" class="link">Marketplace</a></li>
-          <li><a href="" class="link">Features</a></li>
-          <li><a href="" class="link">Integrations</a></li>
+          <li><a href="#" class="link">Overview</a></li>
+          <li><a href="#" class="link">Pricing</a></li>
+          <li><a href="#" class="link">Marketplace</a></li>
+          <li><a href="#" class="link">Features</a></li>
+          <li><a href="#" class="link">Integrations</a></li>
         </ul>
       </div>
 
       <div class="footer__col l-flex l-col">
         <h4 class="col__title">Company</h4>
         <ul class="col__list l-flex l-col">
-          <li><a href="" class="link">About</a></li>
-          <li><a href="" class="link">Team</a></li>
-          <li><a href="" class="link">Blog</a></li>
-          <li><a href="" class="link">Careers</a></li>
+          <li><a href="#" class="link">About</a></li>
+          <li><a href="#" class="link">Team</a></li>
+          <li><a href="#" class="link">Blog</a></li>
+          <li><a href="#" class="link">Careers</a></li>
         </ul>
       </div>
       <div class="footer__col l-flex l-col">
         <h4 class="col__title">Connect</h4>
         <ul class="col__list l-flex l-col">
-          <li><a href="" class="link">Contact</a></li>
-          <li><a href="" class="link">Newsletter</a></li>
-          <li><a href="" class="link">LinkedIn</a></li>
+          <li><a href="#" class="link">Contact</a></li>
+          <li><a href="#" class="link">Newsletter</a></li>
+          <li><a href="#" class="link">LinkedIn</a></li>
         </ul>
       </div>
     </nav>
