@@ -1,43 +1,34 @@
+import { toggleHamburger } from "./hamburger.js";
+import { toggleMenu, hideOtherMenus } from "./desktopNav.js";
+import { toggleMobileMenu, hideOtherMobileMenus} from './mobileNav.js';
+
+
+// Desktop navigation refs
 const product = document.querySelector('.js-product');
 const company = document.querySelector('.js-company');
 const connect = document.querySelector('.js-connect');
-const hamburger = document.querySelector('.hamburger');
 
 const productMenu = document.querySelector('.product__menu');
 const companyMenu = document.querySelector('.company__menu');
 const connectMenu = document.querySelector('.connect__menu');
 
-const menus = [productMenu, companyMenu, connectMenu];
-const eventList = [product, company, connect];
+const dekstopNav = [product, company, connect];
 
-const hideOtherMenus = (menuToSkip, eventTarget) => {
-  menus.forEach(menu => {
-    if (menu !== menuToSkip) {
-      const icon = menu.parentElement.querySelector('.icon');
-      menu.classList.add('hidden');
-      icon.classList.remove('icon--active');
-    }
-  });
+// Mobile navigation refs
+const productMobile = document.querySelector('.js-product-mobile');
+const companyMobile = document.querySelector('.js-company-mobile');
+const connectMobile = document.querySelector('.js-connect-mobile');
 
-  eventList.forEach(item => {
-    if (item !== eventTarget) {
-      item.setAttribute('aria-expanded', false);
-    }
-  })
-}
+const productMenuMobile = document.querySelector('.js-prod-mobile');
+const companyMenuMobile = document.querySelector('.js-comp-mobile');
+const connectMenuMobile = document.querySelector('.js-conn-mobile');
 
-const toggleMenu = (menu, eventTarget) => {
-  const icon = eventTarget.parentElement.querySelector('.icon');
-  eventTarget.setAttribute('aria-expanded', menu.classList.contains('hidden'));
-  toggleIcon(icon);
-  menu.classList.toggle('hidden');
-}
+const mobileNav = [productMobile, companyMobile, connectMobile];
+const hamburger = document.querySelector('.hamburger');
 
-const toggleIcon = (icon) => {
-  icon.classList.toggle('icon--active')
-}
 
-eventList.forEach(item => {
+// Desktop navigation events
+dekstopNav.forEach(item => {
   item.addEventListener('click', (e) => {
     switch (e.target.innerText) {
       case "Product":
@@ -58,8 +49,34 @@ eventList.forEach(item => {
   })
 })
 
+// Mobile navigation events
+
+mobileNav.forEach(item => {
+  item.addEventListener('click', (e) => {
+    switch (e.target.innerText) {
+      case "Product":
+        toggleMobileMenu(productMenuMobile, e.target);
+        hideOtherMobileMenus(productMenuMobile, e.target);
+        break;
+      case "Company":
+        toggleMobileMenu(companyMenuMobile, e.target);
+        hideOtherMobileMenus(companyMenuMobile, e.target);
+        break;
+      case "Connect":
+        toggleMobileMenu(connectMenuMobile, e.target);
+        hideOtherMobileMenus(connectMenuMobile, e.target);
+        break;
+      default:
+        break;
+    }
+  })
+})
 
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('hamburger--active');
-  hamburger.setAttribute('aria-expanded', hamburger.classList.contains('hamburger--active'));
+  toggleHamburger();
 })
+
+
+
+const allEmptyLinks = document.querySelectorAll('a[href="#"]');
+allEmptyLinks.forEach(link => link.addEventListener('click', (e) => e.preventDefault()));
