@@ -53,6 +53,9 @@ ul {
 
 .hidden {
   display: none;
+  &--mobile {
+    visibility: hidden;
+  }
 }
 
 .company,

@@ -44,3 +44,19 @@
     gap: 2.875rem;
   }
 }
+
+@media only screen and (max-width: 1019px) {
+  .laptop {
+    &::before {
+      background-size: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .laptop {
+    &::before {
+      background-size: 145%;
+    }
+  }
+}

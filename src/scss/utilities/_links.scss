@@ -28,6 +28,13 @@
       display: none;
     }
   }
+  &--mobile {
+    color: var(--very-dark-blue);
+    font-weight: bold;
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .link-button {
@@ -56,10 +63,15 @@
       color: var(--very-light-red);
     }
   }
+  &--mobile {
+    background: linear-gradient(to right, var(--bg-very-light-red), var(--bg-light-red));
+    color: var(--wihte);
+  }
 }
 
 .links-wrapper {
   position: relative;
   gap: 0.5rem;
   align-items: center;
+  justify-content: center;
 }

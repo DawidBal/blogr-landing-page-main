@@ -2,7 +2,7 @@
 
 .design {
   position: relative;
-  margin-bottom: 16.5625rem;
+  padding-bottom: 16.5625rem;
   overflow: hidden;
   &__title {
     padding-top: 10rem;
@@ -29,7 +29,7 @@
 @media only screen and (max-width: 1020px) {
   .design {
     margin: 0 1.375rem;
-    margin-bottom: 15rem;
+    padding-bottom: 15rem;
     &__title {
       padding-top: 5.8125rem;
       margin-bottom: calc(5.625rem + 290px);
@@ -48,5 +48,21 @@
     text-align: center;
     margin: 0;
     gap: 2.875rem;
+  }
+}
+
+@media only screen and (max-width: 1019px) {
+  .design {
+    &::before {
+      background-size: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .design {
+    &::before {
+      background-size: 105%;
+    }
   }
 }

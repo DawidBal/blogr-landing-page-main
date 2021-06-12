@@ -5,4 +5,7 @@
   &--active {
     transform: rotateZ(-90deg);
   }
+  &--mobile {
+    fill: var(--bg-light-red);
+  }
 }
